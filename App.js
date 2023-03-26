@@ -38,7 +38,7 @@ function App() {
 
   AppCenter.getInstallId().then(installId => {
     const buildNumber = installId.split(':')[1];
-    console.log('Build number:', buildNumber);
+    setBuildNum(buildNumber)
   });
 
   return (

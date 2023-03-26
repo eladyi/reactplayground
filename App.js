@@ -13,7 +13,8 @@ import {
   Text,
   useColorScheme,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from 'react-native';
 
 import {
@@ -38,6 +39,7 @@ function App() {
 
   AppCenter.getInstallId().then(installId => {
     const buildNumber = installId.split(':')[1];
+    alert(buildNumber);
     setBuildNum(buildNumber)
   });
 

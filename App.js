@@ -10,7 +10,6 @@ import {
   SafeAreaView,
   ScrollView,
   StatusBar,
-  StyleSheet,
   Text,
   useColorScheme,
   View,
@@ -18,7 +17,6 @@ import {
 } from 'react-native';
 
 import {
-  Colors,
   DebugInstructions,
   Header,
   LearnMoreLinks,
@@ -35,13 +33,11 @@ function App() {
   const dispatch = useDispatch()
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+
 
   return (
 
-    <SafeAreaView style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+    <SafeAreaView className="mt-8 px-2 flex-1 justify-center items-center bg-slate-400">
     <View><Text>{count}</Text></View>
     <TouchableOpacity style={{}} onPress={()=>dispatch(increment())}>
         <Text>+</Text>
@@ -54,24 +50,6 @@ function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default () => {
 

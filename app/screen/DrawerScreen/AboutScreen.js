@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import {
-  SafeAreaView, Text, View, TextInput, TouchableOpacity
-
-} from 'react-native';
+import { SafeAreaView, Text} from 'react-native';
+import { useSelector } from 'react-redux'
 
 
 
 const AboutScreen = ({ navigation }) => {
-  
+
+  const deviceId = useSelector((state) => state.device.deviceId)
+
 
   return (
     <SafeAreaView className="flex-1 items-center mt-1">
-      <Text className="text-left">VERSION NUMBER IS : 123 </Text>
+      <Text className="text-left"> DEVICE ID : {deviceId} </Text>
        
     </SafeAreaView>
   );

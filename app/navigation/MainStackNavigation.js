@@ -4,13 +4,19 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from '../screen/HomeScreen/HomeScreen';
 import Login from '../screen/Login/LoginScreen';
 import OtpScreen from '../screen/Login/OtpScreen';
+import { TransitionPresets } from '@react-navigation/stack';
+
 
 const MainStackNavigation = () => {
   
     const Stack = createNativeStackNavigator();
     
     return (
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Login" screenOptions={({ route, navigation }) => ({
+          headerShown: false,
+          gestureEnabled: true,
+          ...TransitionPresets.ModalPresentationIOS,
+        })} >
           <Stack.Screen name="Login" component={Login} options={{ 
             title: 'הפניקס',
             headerStyle: {

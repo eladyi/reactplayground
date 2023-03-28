@@ -5,6 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import MainStackNavigation from './MainStackNavigation';
 import AboutScreen from '../screen/DrawerScreen/AboutScreen';
 import AppcenterTestScreen from '../screen/DrawerScreen/AppcenterTestScreen';
+import WebViewTexstScreen from '../screen/DrawerScreen/WebViewTexstScreen';
 const RootNavigatin = () => {
 
   const Drawer = createDrawerNavigator();
@@ -15,6 +16,7 @@ const RootNavigatin = () => {
         <Drawer.Screen name="Home" component={MainStackNavigation} />
         <Drawer.Screen name="About" component={AboutScreen} />
         <Drawer.Screen name="AppcenterTest" component={AppcenterTestScreen} />
+        <Drawer.Screen name="WebViewTexst" component={WebViewTexstScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
